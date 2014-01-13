@@ -1,4 +1,4 @@
-%_javapackages_macros
+%{?_javapackages_macros:%_javapackages_macros}
 Name:          glassfish-fastinfoset
 Version:       1.2.12
 Release:       9.0%{?dist}
@@ -70,3 +70,35 @@ This package contains javadoc for %{name}.
 %files -f .mfiles
 
 %files javadoc -f .mfiles-javadoc
+
+%changelog
+* Mon Aug 05 2013 gil cattaneo <puntogil@libero.it> 1.2.12-9
+- rebuilt rhbz#992387
+- add xmlstreambuffer and jvnet-parent support
+- swith to Xmvn
+- adapt to new guideline
+
+* Sat Aug 03 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.12-8
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_20_Mass_Rebuild
+
+* Fri Feb 22 2013 Juan Hernandez <juan.hernandez@redhat.com> - 1.2.12-7
+- Remove the wagon-webdav build extension (rhbz 914033)
+
+* Wed Feb 13 2013 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.12-6
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_19_Mass_Rebuild
+
+* Wed Feb 06 2013 Java SIG <java-devel@lists.fedoraproject.org> - 1.2.12-5
+- Update for https://fedoraproject.org/wiki/Fedora_19_Maven_Rebuild
+- Replace maven BuildRequires with maven-local
+
+* Thu Jul 19 2012 Fedora Release Engineering <rel-eng@lists.fedoraproject.org> - 1.2.12-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_18_Mass_Rebuild
+
+* Wed Mar 7 2012 Juan Hernandez <juan.hernandez@redhat.com> 1.2.12-3
+- Changed name from glassfish-fi to glassfish-fastinfoset
+
+* Tue Feb 14 2012 Juan Hernandez <juan.hernandez@redhat.com> 1.2.12-2
+- Cleanup of the spec file
+
+* Sat Jan 21 2012 Marek Goldmann <mgoldman@redhat.com> 1.2.12-1
+- Initial packaging
